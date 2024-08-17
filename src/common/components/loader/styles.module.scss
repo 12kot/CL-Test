@@ -1,0 +1,21 @@
+.loader {
+  border-radius: 50%;
+}
+
+.loader {
+  border: 3.5px solid var(--main-color);
+  border-left-color: transparent;
+  width: 24px;
+  height: 24px;
+  animation: spin89345 1s linear infinite;
+}
+
+@keyframes spin89345 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

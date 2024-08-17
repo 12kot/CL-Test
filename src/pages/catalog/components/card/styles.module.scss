@@ -1,0 +1,34 @@
+.container {
+  height: 275px;
+  min-width: 167px;
+  border: 1px solid #e6ebf2;
+  border-radius: 6px;
+
+  img {
+    height: 147px;
+    width: 100%;
+    background-color: var(--second-bg-color);
+    border-radius: 6px;
+
+    object-fit: cover;
+  }
+
+  .data {
+    height: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 21px 14px;
+
+    b {
+      font-weight: bold;
+      font-size: var(--h2-size);
+    }
+
+    .city {
+      font-size: var(--medium-font-size);
+      color: var(--second-font-color);
+    }
+  }
+}

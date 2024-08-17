@@ -1,0 +1,10 @@
+.container {
+  .cards {
+    padding: var(--page-padding-top) var(--page-padding-left);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(167px, 1fr));
+    grid-column-gap: var(--gap);
+    grid-row-gap: var(--gap);
+  }
+}

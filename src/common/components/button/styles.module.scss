@@ -1,0 +1,33 @@
+.button {
+  background-color: var(--element-bg-color);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+
+  padding: var(--item-padding);
+
+  font-size: 1em;
+  font-weight: bold;
+  background-color: var(--element-bg-color);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+
+  transition: var(--transition);
+
+  &:hover, &:active, &:focus {
+    border-color: var(--main-color);
+  }
+  
+  &:disabled {
+    background-color: var(--second-bg-color);
+    color: var(--second-font-color);
+    border-color: var(--border-color);
+
+    p {
+      color: var(--second-font-color);
+    }
+  }
+}

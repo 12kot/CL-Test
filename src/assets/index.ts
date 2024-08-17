@@ -1,0 +1,6 @@
+export * from "./home.svg"
+export * from "./profile.svg"
+export * from "./catalog.svg"
+export * from "./plus.svg"
+export * from "./arrow.svg"
+export * from "./search.svg"
