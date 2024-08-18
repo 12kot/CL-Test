@@ -1,6 +1,5 @@
-//@ts-ignore
 import { ApiRequest } from "api/axios";
-//@ts-ignore
+
 const ENDPOINT_NAME = "product";
 
 export interface IImg {

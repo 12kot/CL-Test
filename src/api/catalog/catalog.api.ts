@@ -1,6 +1,5 @@
-//@ts-ignore
 import { ApiRequest } from "api/axios";
-//@ts-ignore
+
 const ENDPOINT_NAME = "category";
 
 const mookedCategory: ICategory = {
@@ -81,7 +80,6 @@ export interface ICategoryProduct {
   price: string;
   isFavorite: boolean;
 }
-//@ts-ignore
 export const ApiGetCategory = async (id: number): Promise<ICategory | null> => {
   //return ApiRequest({ path: `${ENDPOINT_NAME}/lyalyatapalya?id=${id}`, method: "GET" });
   return mookedCategory;
