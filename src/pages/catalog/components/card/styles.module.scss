@@ -1,8 +1,36 @@
 .container {
+  position: relative;
+
   height: 275px;
   min-width: 167px;
   border: 1px solid #e6ebf2;
   border-radius: 6px;
+
+  .like {
+    position: absolute;
+    top: 10px;
+    right: 7px;
+
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+
+    svg {
+      width: 19px;
+      fill: #99a2ad;
+    }
+  }
+
+  .active {
+    svg {
+      fill: red;
+    }
+  }
 
   img {
     height: 147px;
