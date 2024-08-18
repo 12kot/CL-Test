@@ -18,21 +18,21 @@ export const Footer = () => {
       </button>
 
       <section className={styles.container}>
-        <NavLink to="/catalog" className={styles.item}>
+        <NavLink to="/catalog" className={styles.item} unstable_viewTransition>
           <HomeSvg />
           <p>{t("footer.home")}</p>
         </NavLink>
-        <NavLink to="/catalog" className={styles.item}>
+        <NavLink to="/catalog" className={styles.item} unstable_viewTransition>
           <CatalogSvg />
           <p>{t("footer.catalog")}</p>
         </NavLink>
       </section>
       <section className={styles.container}>
-        <NavLink to="/catalog" className={styles.item}>
+        <NavLink to="/catalog" className={styles.item} unstable_viewTransition>
           <ProfileSvg />
           <p>{t("footer.messages")}</p>
         </NavLink>
-        <NavLink to="/catalog" className={styles.item}>
+        <NavLink to="/catalog" className={styles.item} unstable_viewTransition>
           <ProfileSvg />
           <p>{t("footer.profile")}</p>
         </NavLink>

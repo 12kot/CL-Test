@@ -11,7 +11,7 @@ interface IProps {
 
 export const Card = ({ product }: IProps) => {
   return (
-    <NavLink to={`/product/${product.id}`} className={styles.container}>
+    <NavLink to={`/product/${product.id}`} className={styles.container} unstable_viewTransition>
       <button
         className={`${styles.like} ${product.isFavorite && styles.active}`}
       >
