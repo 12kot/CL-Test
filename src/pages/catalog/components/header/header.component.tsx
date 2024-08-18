@@ -13,6 +13,11 @@ export const Header = () => {
     //Открыть модалку поиска
   };
 
+  const handleSwitch = (value: boolean) => {
+    //dispatch(someMethod(option))
+    setIsFirst(value)
+  }
+
   return (
     <header className={styles.container}>
       <section className={styles.searchContainer}>
@@ -29,13 +34,13 @@ export const Header = () => {
       <section className={styles.switch}>
         <button
           className={`${isFirst && styles.active}`}
-          onClick={() => setIsFirst(true)}
+          onClick={() => handleSwitch(true)}
         >
           {t("catalog.switch.option1")}
         </button>
         <button
           className={`${!isFirst && styles.active}`}
-          onClick={() => setIsFirst(false)}
+          onClick={() => handleSwitch(false)}
         >
           {t("catalog.switch.option2")}
         </button>

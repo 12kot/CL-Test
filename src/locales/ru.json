@@ -12,5 +12,15 @@
     "catalog": "Каталог",
     "messages": "Сообщения",
     "profile": "Профиль"
+  },
+
+  "product": {
+    "price": "Цена",
+    "sellerRating": "<span>Продавец:</span> {{sellerRating}}",
+    "actions": {
+      "contactSeller": "Связаться с продавцом",
+      "addFovarite": "Добавить в список отслеживания",
+      "removeFovarite": "Удалить из списка отслеживания"
+    }
   }
 }

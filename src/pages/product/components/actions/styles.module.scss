@@ -15,8 +15,13 @@
     color: var(--bg-color);
   }
 
-  .secondButton {
+  .favorite {
     background-color: var(--transparent-green);
     color: var(--main-color);
+  }
+  
+  .delete {
+    background-color: var(--transparent-red);
+    color: var(--red);
   }
 }

@@ -1,24 +1,42 @@
 import { LocationSvg, RatingSvg } from "assets";
 import styles from "./styles.module.scss";
+import { Trans, useTranslation } from "react-i18next";
 
-export const ProductInfo = () => {
+interface IProps {
+  name: string;
+  delivery: string;
+  price: string;
+  sellerRating: string;
+}
+
+export const ProductInfo = ({
+  name,
+  delivery,
+  price,
+  sellerRating,
+}: IProps) => {
+  const { t } = useTranslation();
+
   return (
     <section className={styles.container}>
-      <h2>Шампиньоны свежие. Урожай 2023</h2>
+      <h2>{name}</h2>
       <div className={styles.address}>
         <LocationSvg />
-        <p>Доставка в Тамбов, Тамбовская обл., Россия</p>
+        <p>{delivery}</p>
       </div>
       <div className={styles.price}>
-        <p>Цена</p>
+        <p>{t("product.price")}</p>
         <p>
-          <b>от 93.50 р/кг</b>
+          <b>{price}</b>
         </p>
       </div>
       <div className={styles.rating}>
         <RatingSvg />
         <p>
-          <span>Продавец: </span>5.0
+        <Trans
+          i18nKey={t('product.sellerRating', {sellerRating: sellerRating})}
+          components={{ span: <span /> }}
+        />
         </p>
       </div>
     </section>

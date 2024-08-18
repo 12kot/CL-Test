@@ -3,6 +3,7 @@ import { ICategoryProduct } from "api";
 
 import styles from "./styles.module.scss";
 import { memo } from "react";
+import { NavLink } from "react-router-dom";
 
 interface IProps {
   product: ICategoryProduct;
@@ -10,7 +11,7 @@ interface IProps {
 
 export const Card = ({ product }: IProps) => {
   return (
-    <div className={styles.container}>
+    <NavLink to={`/product/${product.id}`} className={styles.container}>
       <button
         className={`${styles.like} ${product.isFavorite && styles.active}`}
       >
@@ -26,7 +27,7 @@ export const Card = ({ product }: IProps) => {
           <b>{product.price}</b>
         </p>
       </div>
-    </div>
+    </NavLink>
   );
 };
 

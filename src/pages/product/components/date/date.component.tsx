@@ -2,11 +2,15 @@ import { CalendarSvg } from "assets";
 
 import styles from "./styles.module.scss";
 
-export const ProductDate = () => {
+interface IProps {
+  date: string;
+}
+
+export const ProductDate = ({ date }: IProps) => {
   return (
     <section className={styles.container}>
       <CalendarSvg />
-      <p>Сегодня в 03:01:0</p>
+      <p>{date}</p>
     </section>
   );
 };

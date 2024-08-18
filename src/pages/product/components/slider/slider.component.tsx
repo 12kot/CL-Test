@@ -1,8 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./styles.module.scss";
 import { useDebounce } from "common";
+import { IImg } from "api";
 
-export const Slider = () => {
+interface IProps {
+  imgs: IImg[];
+}
+
+export const Slider = ({ imgs }: IProps) => {
   const [scrollLeft, setScrollLeft] = useState(0);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -11,7 +16,7 @@ export const Slider = () => {
 
   useEffect(() => {
     if (!wrapperRef.current) return;
-    
+
     const newIndex = Math.round(
       debouncedScrollLeft / wrapperRef.current.clientWidth
     );
@@ -22,7 +27,7 @@ export const Slider = () => {
     if (!wrapperRef.current) return;
     setScrollLeft(wrapperRef.current.scrollLeft);
   };
-  
+
   const handleIndicatorClick = (index: number) => {
     if (!wrapperRef.current) return;
 
@@ -35,24 +40,19 @@ export const Slider = () => {
   return (
     <section className={styles.container}>
       <div className={styles.wrapper} onScroll={handleScroll} ref={wrapperRef}>
-        <img src="https://storage.in-news.ru/uploads/images/n3Tq7K6nFnx1Rb8I7KWA_widened_652.jpeg" />
-        <img src="https://storage.in-news.ru/uploads/images/n3Tq7K6nFnx1Rb8I7KWA_widened_652.jpeg" />
-        <img src="https://storage.in-news.ru/uploads/images/n3Tq7K6nFnx1Rb8I7KWA_widened_652.jpeg" />
+        {imgs.map((img) => (
+          <img src={img.url} alt={img.alt} key={img.id} />
+        ))}
       </div>
       <div className={styles.pagination}>
         <div className={styles.buttons}>
-          <button
-            onClick={() => handleIndicatorClick(0)}
-            className={`${currentIndex === 0 && styles.active}`}
-          />
-          <button
-            onClick={() => handleIndicatorClick(1)}
-            className={`${currentIndex === 1 && styles.active}`}
-          />
-          <button
-            onClick={() => handleIndicatorClick(2)}
-            className={`${currentIndex === 2 && styles.active}`}
-          />
+          {Array(imgs.length).fill(null).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => handleIndicatorClick(i)}
+              className={`${currentIndex === i && styles.active}`}
+            />
+          ))}
         </div>
       </div>
     </section>

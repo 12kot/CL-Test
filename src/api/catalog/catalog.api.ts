@@ -37,8 +37,7 @@ const mookedCategory: ICategory = {
     },
     {
       id: 4,
-      imgUrl:
-        "https://lafoy.ru/photo_l/foto-2373-0.jpg",
+      imgUrl: "https://lafoy.ru/photo_l/foto-2373-0.jpg",
       imgAlt: "Грибы",
       name: "Продам грибы оптом",
       city: "г. Санкт-Петербург",
@@ -47,8 +46,7 @@ const mookedCategory: ICategory = {
     },
     {
       id: 5,
-      imgUrl:
-        "https://ethnomir.ru/upload/medialibrary/f30/mash.jpg",
+      imgUrl: "https://ethnomir.ru/upload/medialibrary/f30/mash.jpg",
       imgAlt: "Грибы",
       name: "Продам грибы оптом",
       city: "г. Санкт-Петербург",
@@ -84,6 +82,6 @@ export interface ICategoryProduct {
 }
 
 export const ApiGetCategory = async (id: number): Promise<ICategory | null> => {
-  //return ApiRequest({ path: `${ENDPOINT_NAME}`, method: "POST" });
+  //return ApiRequest({ path: `${ENDPOINT_NAME}/lyalyatapalya?id=${id}`, method: "GET" });
   return mookedCategory;
 };

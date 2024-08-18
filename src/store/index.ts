@@ -1,8 +1,9 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { CategorySlice } from "./slices";
+import { CategorySlice, ProductSlice } from "./slices";
 
 const rootReducer = combineReducers({
   category: CategorySlice.reducer,
+  product: ProductSlice.reducer,
 });
 
 const store = configureStore({
@@ -13,4 +14,3 @@ export default store;
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
-
