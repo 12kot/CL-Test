@@ -7,7 +7,7 @@ export const ProductInfo = () => {
       <h2>Шампиньоны свежие. Урожай 2023</h2>
       <div className={styles.address}>
         <LocationSvg />
-        <p>Шампиньоны свежие. Урожай 2023</p>
+        <p>Доставка в Тамбов, Тамбовская обл., Россия</p>
       </div>
       <div className={styles.price}>
         <p>Цена</p>
