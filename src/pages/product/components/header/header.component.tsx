@@ -1,7 +1,7 @@
 import { MiniArrowSvg } from "assets";
 
 import styles from "./styles.module.scss";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useNavigationType } from "react-router-dom";
 
 interface IProps {
   categoryName: string;
@@ -9,8 +9,10 @@ interface IProps {
 
 export const ProductHeader = ({ categoryName }: IProps) => {
   const navigate = useNavigate();
+  const navigationType = useNavigationType();
 
   const handleBackClick = () => {
+    if (navigationType === "POP") return navigate("/catalog");
     navigate(-1);
   };
 
