@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: var(--page-padding-top) var(--page-padding-left);
+
+  .border {
+    width: 100%;
+    border: 1px solid var(--second-bg-color);
+  }
+
+  pre {
+    line-height: 16.8px;
+    letter-spacing: -0.02em;
+  }
+}

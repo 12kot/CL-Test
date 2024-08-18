@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+
+  p {
+    color: var(--second-font-color);
+    font-size: var(--medium-font-size);
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}

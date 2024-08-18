@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+
+  button {
+    width: 100%;
+    height: 49px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 15px;
+
+    background-color: var(--main-color);
+    color: var(--bg-color);
+  }
+
+  .secondButton {
+    background-color: var(--transparent-green);
+    color: var(--main-color);
+  }
+}

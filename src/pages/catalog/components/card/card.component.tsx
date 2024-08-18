@@ -11,14 +11,12 @@ interface IProps {
 export const Card = ({ product }: IProps) => {
   return (
     <div className={styles.container}>
-      <button className={`${styles.like} ${product.isFavorite && styles.active}`}>
+      <button
+        className={`${styles.like} ${product.isFavorite && styles.active}`}
+      >
         <LikeSvg />
       </button>
-      <img
-        src={product.imgUrl}
-        alt={product.imgAlt}
-        loading="lazy"
-      ></img>
+      <img src={product.imgUrl} alt={product.imgAlt} loading="lazy" />
       <div className={styles.data}>
         <p>
           <b>{product.name}</b>
@@ -31,6 +29,5 @@ export const Card = ({ product }: IProps) => {
     </div>
   );
 };
-
 
 export const MemoizedCard = memo(Card);
